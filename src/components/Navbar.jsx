@@ -44,7 +44,9 @@ export default function Navbar() {
             <button className="bg-[#0FF1F6] hover:bg-[#55e2e2] transition duration-300 text-black tracking-wider font-semibold px-3 py-2 rounded-3xl">
               Book a Demo
             </button>
-            <button className="px-3 py-2 border-2 rounded-3xl font-medium">Contact Us</button>
+            <button className="px-3 py-2 border-2 rounded-3xl font-medium">
+              Contact Us
+            </button>
           </div>
         </div>
       </nav>
@@ -64,16 +66,27 @@ export default function Navbar() {
           ${open ? "translate-x-0" : "translate-x-full"}
         `}
       >
-        <div className="p-6 flex flex-col gap-6 text-lg font-medium mt-16">
+        <div className="p-6 flex flex-col gap-6 text-lg font-medium mt-16 ">
           {navItems.map((item) => (
-            <button
+            <a
+              href=""
               key={item}
               onClick={() => setOpen(false)}
-              className="text-left hover:text-blue-500"
+              className="text-left text-fuchsia-900 border-b-2"
             >
               {item}
-            </button>
+            </a>
           ))}
+          <div>
+            <div className="flex flex-col gap-y-3 md:flex-row md:space-x-3 md:hidden ">
+              <button className="bg-[#0FF1F6] hover:bg-[#49f1f1] transition duration-300 text-black tracking-wider font-semibold px-3 py-2 rounded-3xl">
+                Book a Demo
+              </button>
+              <button className="px-3 py-2 border-2  rounded-3xl font-medium">
+                Contact Us
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
