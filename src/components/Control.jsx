@@ -20,18 +20,40 @@ const Control = () => {
       },
     ];
 
+    const partners = [
+      {img:"/BackHub.png" , title: "BackHub"},
+      {img:"CableLabs.png", title:"CableLabs"},
+      {img:"DBS.png" , title:"DBS"},
+      {img:"EasyEuro.png", title:"EasyEuro" },
+      {img:"AMD.png", title:"AMD"},
+    ]
+
   return (
-    <div className="bg-[#002228]">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 mx-auto container gap-10 px-6">
-        {tables.map((item, index) => (
-          <div key={index} className="max-w-[384px] space-y-3">
-            <img src={item.img} alt={item.title} />
-            <h1 className="text-white text-[24px] md:text-[28px] font-semibold ">
-              {item.title}
-            </h1>
-            <p className="text-gray-400 text-[22px]">{item.des}</p>
-          </div>
-        ))}
+    <div>
+      <div className="bg-[#07292F] py-10 flex flex-col items-center">
+        <h1 className="text-[#0FF1F6]">our trusted partners</h1>
+        <div className="grid grid-cols-2 md:grid-cols-5  items-center justify-items-center  gap-4 md:gap-7 lg:gap-10">
+          {
+            partners.map((item, index) => (
+              <div key={index}  className="" >
+                <img src={item.img} alt={item.title} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <div className="bg-[#002228]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20 mx-auto container gap-10 px-6">
+          {tables.map((item, index) => (
+            <div key={index} className="max-w-[384px] space-y-3">
+              <img src={item.img} alt={item.title} />
+              <h1 className="text-white text-[24px] md:text-[28px] font-semibold ">
+                {item.title}
+              </h1>
+              <p className="text-gray-400 text-[22px]">{item.des}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
