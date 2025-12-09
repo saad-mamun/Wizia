@@ -138,8 +138,8 @@ const Control = () => {
           </div>
         </div>
         {/* Carousel */}
-        <div className="flex flex-col gap-3 py-10 ">
-          <div className="flex flex-row items-center md:gap-x-12 px-6 mx-auto container">
+        <div className="flex flex-col gap-3 py-10 container mx-auto  ">
+          <div className="flex flex-row items-center justify-between">
             <ArrowLeft
               onClick={prevSlide}
               className="hidden md:block text-white border border-gray-700 bg-gray-700"
